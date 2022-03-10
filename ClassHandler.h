@@ -28,6 +28,8 @@ public:
     this->classi.push_back(classe);
   };
 
+  ClassInstance getInstanceAt(int index) { return classi.at(index); };
+
   void print();
 
 private:

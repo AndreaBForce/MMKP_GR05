@@ -8,6 +8,7 @@ public:
   void pushRowValue(int value) { this->righe.push_back(value); };
   void setValue(int value) { this->value = value; };
   int getValue() { return this->value; };
+  std::vector<int> getRighe() { return this->righe; };
 
 private:
   int value;

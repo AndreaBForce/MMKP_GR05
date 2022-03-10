@@ -1,10 +1,12 @@
 #ifndef READERWRITER_H
 #define READERWRITER_H
-
+#include "ClassHandler.h"
 class ReaderWriter {
 public:
-  void readInstance(char *instanceName);
+  ClassHandler readInstance(char *instanceName);
   void printInstance();
+
+  void saveVectorToFile(std::vector<int> vettore);
 
 private:
 };

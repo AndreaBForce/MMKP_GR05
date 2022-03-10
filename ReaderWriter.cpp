@@ -5,7 +5,7 @@
 #include <fstream>
 #include <iostream>
 
-void ReaderWriter::readInstance(char *instanceName) {
+ClassHandler ReaderWriter::readInstance(char *instanceName) {
   ClassHandler classHandler;
 
   // Leggi l'header del file (fino alla prima instanza)
@@ -59,6 +59,17 @@ void ReaderWriter::readInstance(char *instanceName) {
     classHandler.addClassInstance(classInstance);
   }
 
+  return classHandler;
   // Metodo di test per vedere se salvava i valori
   // classHandler.print();
+}
+
+void ReaderWriter::saveVectorToFile(std::vector<int> vettore) {
+  std::ofstream myfile;
+  myfile.open("output.txt");
+
+  for (int valore : vettore) {
+    myfile << valore << " ";
+  }
+  myfile.close();
 }

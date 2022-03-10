@@ -1,3 +1,4 @@
+#include "GreedyAlgo.h"
 #include "ReaderWriter.h"
 #include <csignal>
 #include <cstring>
@@ -30,10 +31,15 @@ int main(int argc, char *argv[]) {
   std::cout << "Timelimit:" << timelimit << "\n";
 
   ReaderWriter readerWriter;
-  readerWriter.readInstance(instance);
+  // readerWriter.readInstance(instance);
 
+  GreedyAlgo greedy;
+  greedy.computeGreedy(readerWriter.readInstance(instance));
+
+  readerWriter.saveVectorToFile(greedy.getFinalSequence());
   return 0;
 }
 
-// g++ main.cpp ClassHandler.cpp ClassHandler.h ClassInstance.h
-// ClassInstance.cpp ClassRow.cpp ClassRow.h ReaderWriter.h ReaderWriter.cpp
+/*g++ main.cpp ClassHandler.cpp ClassHandler.h ClassInstance.h ClassInstance.cpp
+ * ClassRow.cpp ClassRow.h ReaderWriter.h ReaderWriter.cpp GreedyAlgo.h
+ * GreedyAlgo.cpp */
