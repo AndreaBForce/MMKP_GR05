@@ -12,10 +12,13 @@ int GreedyAlgo::bestOfInstance(ClassInstance instanza, int pockets) {
   int index = 0, current = 0;
 
   for (ClassRow row : instanza.getRows()) {
+
     for (int valore : row.getRighe()) {
       average += valore;
     }
-    average = average / row.getRighe().size();
+
+    // Cosi tengo conto anche del valore e vedo di massimizzarlo in qualche modo
+    average = (average / row.getRighe().size()) / row.getValue();
 
     if (average <= min) {
       min = average;
@@ -25,5 +28,6 @@ int GreedyAlgo::bestOfInstance(ClassInstance instanza, int pockets) {
     current++;
   }
   // std::cout << index << std::endl;
+
   return index;
 };
