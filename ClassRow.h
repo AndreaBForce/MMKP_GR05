@@ -5,14 +5,14 @@
 /*Classe che definisce la singola row della classe instanza*/
 class ClassRow {
 public:
-  void pushRowValue(int value) { this->righe.push_back(value); };
-  void setValue(int value) { this->value = value; };
-  int getValue() { return this->value; };
-  std::vector<int> getRighe() { return this->righe; };
+  void push_row_value(int value) { this->row_values.push_back(value); };
+  void set_value(int value) { this->value = value; };
+  int get_value() { return this->value; };
+  std::vector<int> get_row_values() { return this->row_values; };
 
 private:
   int value;
-  std::vector<int> righe;
+  std::vector<int> row_values;
 };
 
 #endif // CLASSROW

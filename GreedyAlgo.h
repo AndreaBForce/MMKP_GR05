@@ -4,10 +4,10 @@
 #include <vector>
 class GreedyAlgo {
 public:
-  void computeGreedy(ClassHandler classe);
-  int bestOfInstance(ClassInstance instanza, int pockets);
-  void addValue(int value) { this->sequence.push_back(value); };
-  std::vector<int> getFinalSequence() { return this->sequence; };
+  void compute_greedy(ClassHandler class_handler);
+  int best_of_instance(ClassInstance class_instance, int pockets);
+  void add_value(int value) { this->sequence.push_back(value); };
+  std::vector<int> get_final_sequence() { return this->sequence; };
 
 private:
   std::vector<int> sequence;

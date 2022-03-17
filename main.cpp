@@ -37,9 +37,9 @@ int main(int argc, char *argv[]) {
   // readerWriter.readInstance(instance);
 
   GreedyAlgo greedy;
-  greedy.computeGreedy(readerWriter.readInstance(instance));
+  greedy.compute_greedy(readerWriter.read_instance(instance));
 
-  readerWriter.saveVectorToFile(greedy.getFinalSequence());
+  readerWriter.save_vector_to_file(greedy.get_final_sequence());
   
   end = clock();
   printf("time: %.4fs \n", ((float)end - start)/CLOCKS_PER_SEC);

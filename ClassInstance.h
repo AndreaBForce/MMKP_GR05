@@ -4,12 +4,12 @@
 #include "ClassRow.h"
 #include <vector>
 
-/*Classe che gestisce la singola instanza della classe W1 che contiene la
+/*Classe che gestisce la singola instanza della class_row W1 che contiene la
  * singola row*/
 class ClassInstance {
 public:
-  void pushRow(ClassRow classe) { this->rows.push_back(classe); };
-  std::vector<ClassRow> getRows() { return this->rows; };
+  void push_row(ClassRow class_row) { this->rows.push_back(class_row); };
+  std::vector<ClassRow> get_rows() { return this->rows; };
 
 private:
   // Campi da rimuovere volendo

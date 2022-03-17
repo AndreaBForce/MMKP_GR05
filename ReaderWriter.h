@@ -3,10 +3,9 @@
 #include "ClassHandler.h"
 class ReaderWriter {
 public:
-  ClassHandler readInstance(char *instanceName);
-  void printInstance();
+  ClassHandler read_instance(char *instance_name);
 
-  void saveVectorToFile(std::vector<int> vettore);
+  void save_vector_to_file(std::vector<int> out_vector);
 
 private:
 };

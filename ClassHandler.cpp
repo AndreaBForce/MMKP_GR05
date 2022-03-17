@@ -3,9 +3,9 @@
 #include <iostream>
 
 void ClassHandler::print() {
-  for (ClassInstance classe : classi) {
+  for (ClassInstance classe : class_list) {
     for (ClassRow row : classe.getRows()) {
-      std::cout << row.getValue() << std::endl;
+      std::cout << row.get_value() << std::endl;
     }
   }
 }

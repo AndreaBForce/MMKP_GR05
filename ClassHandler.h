@@ -10,37 +10,33 @@ public:
   ClassHandler() {}
   ~ClassHandler() {}
 
-  void setNumberOfClasses(int numberOfClasses) {
-    this->numberOfClasses = numberOfClasses;
+  void set_number_of_classes(int numberOfClasses) {
+    this->number_of_classes = numberOfClasses;
   };
-  void setNumberOfPockets(int numberOfPockets) {
-    this->numberOfPockets = numberOfPockets;
+  void set_number_of_pockets(int numberOfPockets) {
+    this->number_of_pockets = numberOfPockets;
   };
-  void setPocketCapacity(int pocketCapacity) {
-    this->pocketCapacity = pocketCapacity;
-  };
-
-  int getNumberOfPockets() { return this->numberOfPockets; };
-  int getNumberOfClasses() { return this->numberOfClasses; };
-
-  void initZaino(int capacita) { this->zaino.push_back(capacita); };
-  void addClassInstance(ClassInstance classe) {
-    this->classi.push_back(classe);
+  void set_pocket_capacity(int pocketCapacity) {
+    this->pocket_capacity = pocketCapacity;
   };
 
-  ClassInstance getInstanceAt(int index) { return classi.at(index); };
+  int get_number_of_pockets() { return this->number_of_pockets; };
+  int get_number_of_classes() { return this->number_of_classes; };
+
+  void add_class_instance(ClassInstance classe) {
+    this->class_list.push_back(classe);
+  };
+
+  ClassInstance get_instance_at(int index) { return class_list.at(index); };
 
   void print();
 
 private:
-  int numberOfClasses;
-  int numberOfPockets;
-  int pocketCapacity;
+  int number_of_classes;
+  int number_of_pockets;
+  int pocket_capacity;
 
-  std::vector<ClassInstance> classi;
-
-  // Instanziare vector di pockets che è il nostro zaino
-  std::vector<int> zaino;
+  std::vector<ClassInstance> class_list;
 };
 
 #endif // CLASSHANDLER
