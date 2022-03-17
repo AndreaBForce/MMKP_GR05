@@ -4,6 +4,7 @@
 #include <cstring>
 #include <iostream>
 #include <string>
+#include <chrono>
 
 char *getOption(int argc, char *argv[], const char *option) {
   for (int i = 0; i < argc; ++i)
@@ -13,6 +14,8 @@ char *getOption(int argc, char *argv[], const char *option) {
 }
 
 int main(int argc, char *argv[]) {
+  clock_t start, end;
+  start = clock();
 
   std::cout << "Salve mundi!" << std::endl;
 
@@ -27,8 +30,8 @@ int main(int argc, char *argv[]) {
 
   int timelimit = atoi(stimelimit);
 
-  std::cout << "Instance name:" << instance << "\n";
-  std::cout << "Timelimit:" << timelimit << "\n";
+  std::cout << "Instance name: " << instance << "\n";
+  std::cout << "Timelimit: " << timelimit << "s\n";
 
   ReaderWriter readerWriter;
   // readerWriter.readInstance(instance);
@@ -37,6 +40,10 @@ int main(int argc, char *argv[]) {
   greedy.computeGreedy(readerWriter.readInstance(instance));
 
   readerWriter.saveVectorToFile(greedy.getFinalSequence());
+  
+  end = clock();
+  printf("time: %.4fs \n", ((float)end - start)/CLOCKS_PER_SEC);
+
   return 0;
 }
 
