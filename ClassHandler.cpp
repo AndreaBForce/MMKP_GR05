@@ -4,7 +4,7 @@
 
 void ClassHandler::print() {
   for (ClassInstance classe : class_list) {
-    for (ClassRow row : classe.getRows()) {
+    for (ClassRow row : classe.get_rows()) {
       std::cout << row.get_value() << std::endl;
     }
   }

@@ -2,12 +2,14 @@
 #define KNAPSACKHANDLER_H
 
 #include <vector>
+#include "ClassHandler.h"
 
 class KnapsackHandler
 {
 private:
     /* data */
     std::vector<int> sack;
+    ClassHandler class_handler;
 
 public:
     KnapsackHandler(/* args */);
@@ -16,6 +18,10 @@ public:
     std::vector<int> get_sack(){return sack;};
 
     void add_pocket_size(int capacity) { sack.push_back(capacity);};
+
+    ClassHandler get_class_handler(){return class_handler;};
+
+    void set_class_handler(ClassHandler class_handler){ this->class_handler = class_handler; };
 };
 
 #endif

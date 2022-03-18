@@ -6,7 +6,7 @@
 #include <fstream>
 #include <iostream>
 
-ClassHandler ReaderWriter::read_instance(char *instance_name) {
+KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
   ClassHandler class_handler;
   KnapsackHandler sack_handler;
 
@@ -19,10 +19,14 @@ ClassHandler ReaderWriter::read_instance(char *instance_name) {
   // Lettura header del file
   // Setto numero classi
   my_file >> ch;
+  //creo qua la classHandler e passo il numero di classi
   class_handler.set_number_of_classes(ch);
+
+  std::cout << "num classi: " << class_handler.get_number_of_classes() << "\n";
 
   // Setto numero pockets
   my_file >> ch;
+  //Creo qua il knapsack e passo il numero di tasche
   class_handler.set_number_of_pockets(ch);
 
   // Inizializzo tasche zaino
@@ -41,10 +45,12 @@ ClassHandler ReaderWriter::read_instance(char *instance_name) {
     // Dimensione instanza classe (10 esempio mmkp_d_244.txt)
     ClassInstance class_instance;
     my_file >> instance_dimension;
+    //creao qui la classInstance e passo il numero di righe che ha
 
     // std::cout << instance_dimension << std::endl;
     // Su ogni instanza ciclo per leggere ogni riga di essa
     for (int i = 0; i < instance_dimension; i++) {
+      //qua creo una righa, devo passare il numero di pockets
       ClassRow class_row;
       my_file >> rowValue;
       // std::cout << rowValue << std::endl;
@@ -61,7 +67,8 @@ ClassHandler ReaderWriter::read_instance(char *instance_name) {
     class_handler.add_class_instance(class_instance);
   }
 
-  return class_handler;
+  sack_handler.set_class_handler(class_handler);
+  return sack_handler;
   // Metodo di test per vedere se salvava i valori
   // classHandler.print();
 }

@@ -23,11 +23,11 @@ public:
   int get_number_of_pockets() { return this->number_of_pockets; };
   int get_number_of_classes() { return this->number_of_classes; };
 
-  void add_class_instance(ClassInstance classe) {
-    this->class_list.push_back(classe);
+  void add_class_instance(ClassInstance class_instance) {
+    this->class_list.push_back(class_instance);
   };
 
-  ClassInstance get_instance_at(int index) { return class_list.at(index); };
+  ClassInstance get_instance_at(int index) { return class_list[index]; };
 
   void print();
 

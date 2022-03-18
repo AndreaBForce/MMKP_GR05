@@ -16,9 +16,7 @@ char *getOption(int argc, char *argv[], const char *option) {
 int main(int argc, char *argv[]) {
   clock_t start, end;
   start = clock();
-
-  std::cout << "Salve mundi!" << std::endl;
-
+  
   char *instance = getOption(argc, argv, std::string("-i").c_str());
   char *stimelimit = getOption(argc, argv, std::string("-t").c_str());
   if (instance == NULL || stimelimit == NULL) {
@@ -34,15 +32,16 @@ int main(int argc, char *argv[]) {
   std::cout << "Timelimit: " << timelimit << "s\n";
 
   ReaderWriter readerWriter;
-  // readerWriter.readInstance(instance);
+  KnapsackHandler sack_handler = readerWriter.read_instance(instance);
 
+  //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
   GreedyAlgo greedy;
-  greedy.compute_greedy(readerWriter.read_instance(instance));
+  greedy.compute_greedy(sack_handler);
 
   readerWriter.save_vector_to_file(greedy.get_final_sequence());
   
   end = clock();
-  printf("time: %.4fs \n", ((float)end - start)/CLOCKS_PER_SEC);
+  printf("time: %.8fs \n", ((float)end - start)/CLOCKS_PER_SEC);
 
   return 0;
 }
