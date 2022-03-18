@@ -32,3 +32,4 @@
 *.app
 mmkp
 .vscode
+.DS_Store

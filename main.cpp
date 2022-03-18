@@ -1,5 +1,6 @@
 #include "GreedyAlgo.h"
 #include "ReaderWriter.h"
+#include "KnapsackHandler.h"
 #include <csignal>
 #include <cstring>
 #include <iostream>
@@ -42,6 +43,35 @@ int main(int argc, char *argv[]) {
   
   end = clock();
   printf("time: %.8fs \n", ((float)end - start)/CLOCKS_PER_SEC);
+
+  //code to check pocket sizes and the value
+  int final_value = 0;
+  for (int i = 0; i < sack_handler.get_class_handler().get_number_of_classes(); i++)
+  {
+    /* code */
+    ClassInstance class_instance = sack_handler.get_class_handler().get_instance_at(i);
+
+    ClassRow class_row = class_instance.get_rows()[greedy.get_final_sequence()[i]]; 
+
+    final_value += class_row.get_value();
+    for (int j = 0; j < sack_handler.get_class_handler().get_number_of_pockets(); j++)
+    {
+      /* code */
+      sack_handler.substract_pocket_size(class_row.get_row_values()[j], j);
+    }
+  }
+
+  std::cout << "Final value: " << final_value << "\n";
+
+  std::cout << "Remaining pocket size:" << "\n";
+
+  for (int size : sack_handler.get_sack())
+  {
+    std::cout << size << " ";
+  }
+  
+  std::cout << "\n";
+
 
   return 0;
 }

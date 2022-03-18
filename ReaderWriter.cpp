@@ -22,8 +22,6 @@ KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
   //creo qua la classHandler e passo il numero di classi
   class_handler.set_number_of_classes(ch);
 
-  std::cout << "num classi: " << class_handler.get_number_of_classes() << "\n";
-
   // Setto numero pockets
   my_file >> ch;
   //Creo qua il knapsack e passo il numero di tasche
