@@ -8,6 +8,10 @@
 class ClassHandler {
 public:
   ClassHandler() {}
+  ClassHandler(int num_of_classes) { 
+    this->number_of_classes = num_of_classes;
+    class_list.reserve(num_of_classes);
+  }
   ~ClassHandler() {}
 
   void set_number_of_classes(int numberOfClasses) {

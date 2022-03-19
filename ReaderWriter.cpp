@@ -7,8 +7,8 @@
 #include <iostream>
 
 KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
-  ClassHandler class_handler;
-  KnapsackHandler sack_handler;
+  // ClassHandler class_handler;
+  // KnapsackHandler sack_handler;
 
   // Leggi l'header del file (fino alla prima instanza)
   std::fstream my_file;
@@ -20,12 +20,15 @@ KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
   // Setto numero classi
   my_file >> ch;
   //creo qua la classHandler e passo il numero di classi
-  class_handler.set_number_of_classes(ch);
+  ClassHandler class_handler(ch);
+  // class_handler.set_number_of_classes(ch);
 
   // Setto numero pockets
   my_file >> ch;
+  int pockets = ch;
   //Creo qua il knapsack e passo il numero di tasche
-  class_handler.set_number_of_pockets(ch);
+  KnapsackHandler sack_handler(pockets);
+  class_handler.set_number_of_pockets(pockets);
 
   // Inizializzo tasche zaino
   for (int i = 0; i < class_handler.get_number_of_pockets(); i++) {
@@ -41,18 +44,18 @@ KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
   for (int k = 0; k < class_handler.get_number_of_classes(); k++) {
     // Todo aggiungere un id
     // Dimensione instanza classe (10 esempio mmkp_d_244.txt)
-    ClassInstance class_instance;
     my_file >> instance_dimension;
-    //creao qui la classInstance e passo il numero di righe che ha
+    ClassInstance class_instance(instance_dimension);
+    //creo qui la classInstance e passo il numero di righe che ha
 
     // std::cout << instance_dimension << std::endl;
     // Su ogni instanza ciclo per leggere ogni riga di essa
     for (int i = 0; i < instance_dimension; i++) {
       //qua creo una righa, devo passare il numero di pockets
-      ClassRow class_row;
       my_file >> rowValue;
+      ClassRow class_row(pockets, rowValue);
       // std::cout << rowValue << std::endl;
-      class_row.set_value(rowValue);
+      // class_row.set_value(rowValue);
       // Su ogni row pusho i valori e li salvo
 
       for (int j = 0; j < class_handler.get_number_of_pockets(); j++) {

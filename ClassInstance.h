@@ -8,6 +8,11 @@
  * singola row*/
 class ClassInstance {
 public:
+  ClassInstance(int num_rows){
+    rows.reserve(num_rows);
+  }
+  ~ClassInstance(){}
+  
   void push_row(ClassRow class_row) { this->rows.push_back(class_row); };
   std::vector<ClassRow> get_rows() { return this->rows; };
 

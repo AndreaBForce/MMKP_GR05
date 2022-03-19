@@ -46,18 +46,21 @@ int main(int argc, char *argv[]) {
 
   //code to check pocket sizes and the value
   int final_value = 0;
+  ClassHandler class_handler = sack_handler.get_class_handler();
+  std::vector<int> final_sequence = greedy.get_final_sequence();
   for (int i = 0; i < sack_handler.get_class_handler().get_number_of_classes(); i++)
   {
     /* code */
-    ClassInstance class_instance = sack_handler.get_class_handler().get_instance_at(i);
+    ClassInstance class_instance = class_handler.get_instance_at(i);
 
-    ClassRow class_row = class_instance.get_rows()[greedy.get_final_sequence()[i]]; 
+    ClassRow class_row = class_instance.get_rows()[final_sequence[i]];
+    std::vector<int> row_values = class_row.get_row_values(); 
 
     final_value += class_row.get_value();
-    for (int j = 0; j < sack_handler.get_class_handler().get_number_of_pockets(); j++)
+    for (int j = 0; j < class_handler.get_number_of_pockets(); j++)
     {
       /* code */
-      sack_handler.substract_pocket_size(class_row.get_row_values()[j], j);
+      sack_handler.substract_pocket_size(row_values[j], j);
     }
   }
 

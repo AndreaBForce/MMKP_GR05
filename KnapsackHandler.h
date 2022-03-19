@@ -12,8 +12,10 @@ private:
     ClassHandler class_handler;
 
 public:
-    KnapsackHandler(/* args */);
-    ~KnapsackHandler();
+    KnapsackHandler(int num_pockets){
+        sack.reserve(num_pockets);
+    }
+    ~KnapsackHandler() {}
 
     std::vector<int> get_sack(){return sack;};
 
