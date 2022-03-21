@@ -74,12 +74,17 @@ KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
   // classHandler.print();
 }
 
-void ReaderWriter::save_vector_to_file(std::vector<int> out_vector) {
-  std::ofstream myfile;
-  myfile.open("output.txt");
+void ReaderWriter::save_vector_to_file(std::vector<int> out_vector, std::string instance_name, float time) {
+  std::ofstream out_file;
+  std::ofstream time_file;
+  out_file.open(instance_name + ".out");
+  time_file.open(instance_name + ".time");
 
   for (int valore : out_vector) {
-    myfile << valore << " ";
+    out_file << valore << " ";
   }
-  myfile.close();
+  out_file.close();
+
+  time_file << time;
+  time_file.close();
 }

@@ -39,9 +39,9 @@ int main(int argc, char *argv[]) {
   GreedyAlgo greedy;
   greedy.compute_greedy(sack_handler);
 
-  readerWriter.save_vector_to_file(greedy.get_final_sequence());
-  
   end = clock();
+  readerWriter.save_vector_to_file(greedy.get_final_sequence(), instance, ((float)end - start)/CLOCKS_PER_SEC);
+  
   printf("time: %.8fs \n", ((float)end - start)/CLOCKS_PER_SEC);
 
   //code to check pocket sizes and the value
