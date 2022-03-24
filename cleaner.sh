@@ -1,11 +1,11 @@
 #!/bin/bash
 
-for file in test_files/*.out;
+for file in Instances/standard/*.out;
 do
   rm "$file";
 done
 
-for file in test_files/*.time;
+for file in Instances/standard/*.time;
 do
   rm "$file";
 done

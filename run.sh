@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in test_files/mmkp_d*;
+for file in Instances/standard/mmkp_*;
 do
   ./mmkp -i "$file" -t 60;
 done

@@ -1,3 +1,5 @@
 #!/bin/bash
 
-g++ -O3 -o mmkp -I . *.cpp -lm;
+cd MMKP_GR05;
+
+g++ -O3 -o ../mmkp -I . *.cpp -lm;
