@@ -22,3 +22,6 @@ Esempio di Instanza letta:
 
 File di output:
 N interi partendo da 0
+
+
+-Per il momento la greedy, va bene cosi poi modificheremo i robi
