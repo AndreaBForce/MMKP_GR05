@@ -8,6 +8,10 @@ void GreedyAlgo::compute_greedy(KnapsackHandler sack_handler) {
   for (int i = 0; i < class_handler.get_number_of_classes(); i++) {
     ClassInstance class_instance = class_handler.get_instance_at(i);
     int index = best_of_instance( class_instance.get_rows(), pockets);
+
+    //Da aggiungere tuning
+    pockets = sack_handler.subtract_best_from_sack(class_instance,index,pockets);
+
     add_value(index);  
   }
 }
