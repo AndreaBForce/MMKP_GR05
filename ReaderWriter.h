@@ -2,6 +2,7 @@
 #define READERWRITER_H
 #include "ClassHandler.h"
 #include "KnapsackHandler.h"
+#include <string>
 
 class ReaderWriter {
 public:
