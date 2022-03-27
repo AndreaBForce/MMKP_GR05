@@ -26,8 +26,6 @@ public:
     ClassHandler get_class_handler(){return class_handler;};
 
     void set_class_handler(ClassHandler class_handler){ this->class_handler = class_handler; };
-
-    std::vector<int> subtract_best_from_sack(ClassInstance class_instance,int index,std::vector<int> pockets);
 };
 
 #endif

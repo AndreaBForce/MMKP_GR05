@@ -14,8 +14,43 @@ char *getOption(int argc, char *argv[], const char *option) {
   return NULL;
 }
 
+// TODO REMOVE before assignment
+// method that checks all tune values between 0 and 1 with 1ms granularity
+void check_tune_values(KnapsackHandler sack_handler){
+  std::vector<float> tune_values;
+  float delta = 0.001;
+
+  for (int i = 0; i < 1000; i++)
+  {
+    //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
+    GreedyAlgo greedy(sack_handler.get_class_handler().get_number_of_pockets(), delta*i);
+    std::vector<int> res = greedy.compute_greedy(sack_handler);
+
+    int err = 0;
+    for (int size : res){
+      if (size < 0)
+      {
+        err = 1;
+        break;
+      }
+    }
+    if (err == 0)
+    {
+      tune_values.push_back(i*delta);
+    }
+    
+  }
+
+  std::cout << "Tune values" << "\n";
+  for (float v : tune_values)
+  {
+    std::cout << v << " ";
+  }
+  std::cout << "\n";
+}
+
 int main(int argc, char *argv[]) {
-  clock_t start, end;
+  clock_t start, mid, end;
   start = clock();
   
   char *instance = getOption(argc, argv, std::string("-i").c_str());
@@ -35,11 +70,16 @@ int main(int argc, char *argv[]) {
   ReaderWriter readerWriter;
   KnapsackHandler sack_handler = readerWriter.read_instance(instance);
 
-  //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
-  GreedyAlgo greedy;
-  greedy.compute_greedy(sack_handler);
+  mid = clock();
+  
+  printf("time reading file: %.8fs \n", ((float)mid - start)/CLOCKS_PER_SEC);
 
+  //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
+  GreedyAlgo greedy(sack_handler.get_class_handler().get_number_of_pockets(), 0.61);
+  std::vector<int> res = greedy.compute_greedy(sack_handler);
+  
   end = clock();
+
   readerWriter.save_vector_to_file(greedy.get_final_sequence(), instance, ((float)end - start)/CLOCKS_PER_SEC);
   
   printf("time: %.8fs \n", ((float)end - start)/CLOCKS_PER_SEC);
@@ -57,18 +97,18 @@ int main(int argc, char *argv[]) {
     std::vector<int> row_values = class_row.get_row_values(); 
 
     final_value += class_row.get_value();
-    for (int j = 0; j < class_handler.get_number_of_pockets(); j++)
-    {
-      /* code */
-      sack_handler.substract_pocket_size(row_values[j], j);
-    }
+    // for (int j = 0; j < class_handler.get_number_of_pockets(); j++)
+    // {
+    //   /* code */
+    //   sack_handler.substract_pocket_size(row_values[j], j);
+    // }
   }
 
   std::cout << "Final value: " << final_value << "\n";
 
   std::cout << "Remaining pocket size:" << "\n";
 
-  for (int size : sack_handler.get_sack())
+  for (int size : res)
   {
     std::cout << size << " ";
   }
