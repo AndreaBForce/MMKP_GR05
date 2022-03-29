@@ -14,6 +14,12 @@ char *getOption(int argc, char *argv[], const char *option) {
   return NULL;
 }
 
+void signalHandler( int signum ) {
+   std::cout << "Interrupt signal (" << signum << ") received.\n";
+
+   exit(signum);  
+}
+
 // TODO REMOVE before assignment
 // method that checks all tune values between 0 and 1 with 1ms granularity
 void check_tune_values(KnapsackHandler sack_handler){
@@ -66,6 +72,8 @@ int main(int argc, char *argv[]) {
 
   std::cout << "Instance name: " << instance << "\n";
   std::cout << "Timelimit: " << timelimit << "s\n";
+
+  signal(SIGINT, signalHandler);
 
   ReaderWriter readerWriter;
   KnapsackHandler sack_handler = readerWriter.read_instance(instance);
