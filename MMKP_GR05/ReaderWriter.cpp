@@ -7,8 +7,6 @@
 #include <iostream>
 
 KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
-  // ClassHandler class_handler;
-  // KnapsackHandler sack_handler;
 
   // Leggi l'header del file (fino alla prima instanza)
   std::fstream my_file;
@@ -42,21 +40,12 @@ KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
 
   // Ciclo che va su tutte le classi
   for (int k = 0; k < class_handler.get_number_of_classes(); k++) {
-    // Todo aggiungere un id
-    // Dimensione instanza classe (10 esempio mmkp_d_244.txt)
     my_file >> instance_dimension;
     ClassInstance class_instance(instance_dimension);
-    //creo qui la classInstance e passo il numero di righe che ha
 
-    // std::cout << instance_dimension << std::endl;
-    // Su ogni instanza ciclo per leggere ogni riga di essa
     for (int i = 0; i < instance_dimension; i++) {
-      //qua creo una righa, devo passare il numero di pockets
       my_file >> rowValue;
       ClassRow class_row(pockets, rowValue);
-      // std::cout << rowValue << std::endl;
-      // class_row.set_value(rowValue);
-      // Su ogni row pusho i valori e li salvo
 
       for (int j = 0; j < class_handler.get_number_of_pockets(); j++) {
         my_file >> ch;
@@ -70,21 +59,15 @@ KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
 
   sack_handler.set_class_handler(class_handler);
   return sack_handler;
-  // Metodo di test per vedere se salvava i valori
-  // classHandler.print();
 }
 
-void ReaderWriter::save_vector_to_file(std::vector<int> out_vector, std::string instance_name, float time) {
+void ReaderWriter::save_vector_to_file(std::vector<int> out_vector, std::string instance_name) {
   std::ofstream out_file;
-  std::ofstream time_file;
   out_file.open(instance_name + ".out");
-  time_file.open(instance_name + ".time");
 
   for (int valore : out_vector) {
     out_file << valore << " ";
   }
+  
   out_file.close();
-
-  time_file << time;
-  time_file.close();
 }

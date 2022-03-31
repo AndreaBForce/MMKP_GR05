@@ -21,7 +21,7 @@ std::vector<int> GreedyAlgo::compute_greedy(KnapsackHandler sack_handler) {
 }
 
 int GreedyAlgo::best_of_instance(std::vector<ClassRow> rows, std::vector<int> pocket_sizes) {
-  float min = 99999;
+  float min = 0.0;
   int index = 0, current = 0;
   
   for (ClassRow row : rows) {
@@ -30,11 +30,10 @@ int GreedyAlgo::best_of_instance(std::vector<ClassRow> rows, std::vector<int> po
 
     for (int i = 0; i < pocket_sizes.size(); i++)
     {
-      /* code */
       average += (float) row_values[i]/pocket_sizes[i]*pocket_weight[i];
     }
 
-    if (average <= min) {
+    if (average <= min || current == 0) {
       min = average;
       index = current;
     }
@@ -50,11 +49,13 @@ std::vector<int> GreedyAlgo::substract_best_from_pockets(std::vector<int> row_va
   for (int i = 0; i < row_values.size() ; i++)
   {
     pockets[i] -= row_values[i];
+    if(pockets[i] == 0){
+      pockets[i] = 1;
+    }
     if ( (float) pockets[i]/initial_pockets[i] <= tune_value)
     {
       pocket_weight[i]+= 2;
     }
-    
   }
   
   return pockets;
