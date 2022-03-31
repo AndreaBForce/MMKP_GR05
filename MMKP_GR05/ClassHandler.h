@@ -33,8 +33,6 @@ public:
 
   ClassInstance get_instance_at(int index) { return class_list[index]; };
 
-  void print();
-
 private:
   int number_of_classes;
   int number_of_pockets;

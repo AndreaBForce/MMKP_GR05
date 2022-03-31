@@ -20,41 +20,6 @@ void signalHandler( int signum ) {
    exit(signum);  
 }
 
-// TODO REMOVE before assignment
-// method that checks all tune values between 0 and 1 with 1ms granularity
-void check_tune_values(KnapsackHandler sack_handler){
-  std::vector<float> tune_values;
-  float delta = 0.001;
-
-  for (int i = 0; i < 1000; i++)
-  {
-    //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
-    GreedyAlgo greedy(sack_handler.get_class_handler().get_number_of_pockets(), delta*i);
-    std::vector<int> res = greedy.compute_greedy(sack_handler);
-
-    int err = 0;
-    for (int size : res){
-      if (size < 0)
-      {
-        err = 1;
-        break;
-      }
-    }
-    if (err == 0)
-    {
-      tune_values.push_back(i*delta);
-    }
-    
-  }
-
-  std::cout << "Tune values" << "\n";
-  for (float v : tune_values)
-  {
-    std::cout << v << " ";
-  }
-  std::cout << "\n";
-}
-
 int main(int argc, char *argv[]) {
   clock_t start, mid, end;
   start = clock();
@@ -105,11 +70,6 @@ int main(int argc, char *argv[]) {
     std::vector<int> row_values = class_row.get_row_values(); 
 
     final_value += class_row.get_value();
-    // for (int j = 0; j < class_handler.get_number_of_pockets(); j++)
-    // {
-    //   /* code */
-    //   sack_handler.substract_pocket_size(row_values[j], j);
-    // }
   }
 
   std::cout << "Final value: " << final_value << "\n";
@@ -126,7 +86,3 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
-
-/*g++ main.cpp ClassHandler.cpp ClassHandler.h ClassInstance.h ClassInstance.cpp
- * ClassRow.cpp ClassRow.h ReaderWriter.h ReaderWriter.cpp GreedyAlgo.h
- * GreedyAlgo.cpp */

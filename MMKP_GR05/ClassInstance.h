@@ -17,10 +17,6 @@ public:
   std::vector<ClassRow> get_rows() { return this->rows; };
 
 private:
-  // Campi da rimuovere volendo
-  int id;
-  int done;
-
   std::vector<ClassRow> rows;
 };
 
