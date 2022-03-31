@@ -1,6 +1,8 @@
 #!/bin/bash
 
-for file in Instances/standard/mmkp_*.txt;
+rm -f result.csv
+
+for file in instances/standard/mmkp_*.txt;
 do
-  ./mmkp_verify -i "$file" -t 60 -s result.csv -g MMKP_GR05;
+  ./mmkp_verifier -i "$file" -t 60 -s result.csv -g MMKP_GR05;
 done

@@ -1,0 +1,260 @@
+MMKP_GR05,instances/standard/mmkp_a_07.txt,18555,0.003905,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_a_08.txt,28094,0.00678,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_a_09.txt,37454,0.008343,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_a_10.txt,46862,0.015008,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_a_11.txt,55789,0.011724,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_a_12.txt,64828,0.01338,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_a_13.txt,74232,0.015575,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_01.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_b_02.txt,9993,0.003553,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_03.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_b_04.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_b_05.txt,13763,0.005231,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_06.txt,13777,0.005362,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_07.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_b_08.txt,14457,0.005496,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_09.txt,14648,0.005506,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_10.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_b_11.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_b_12.txt,18045,0.007056,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_13.txt,14328,0.016111,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_14.txt,21971,0.022305,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_15.txt,25915,0.019655,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_16.txt,28508,0.02003,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_17.txt,35654,0.02248,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_18.txt,40277,0.017879,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_19.txt,42800,0.028982,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_b_20.txt,51086,0.023901,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_c_21.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_c_22.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_c_23.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_c_24.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_c_25.txt,33480,0.003585,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_c_26.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_c_27.txt,78378,0.005959,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_c_28.txt,118520,0.007324,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_c_29.txt,155236,0.009425,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_c_30.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_1.txt,20872,0.004082,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_10.txt,21340,0.007925,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_100.txt,219304,0.028955,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_101.txt,153163,0.037988,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_102.txt,176780,0.043143,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_103.txt,158452,0.047821,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_105.txt,159410,0.058662,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_106.txt,209105,0.06044,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_107.txt,231859,0.053593,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_108.txt,217799,0.05563,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_109.txt,188844,0.060973,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_11.txt,22323,0.008236,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_110.txt,160981,0.061218,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_111.txt,144661,0.061973,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_112.txt,179569,0.0774,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_113.txt,241014,0.035187,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_114.txt,283080,0.047472,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_115.txt,229488,0.039023,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_116.txt,262414,0.038181,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_117.txt,254580,0.050903,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_118.txt,273726,0.05777,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_119.txt,296562,0.050524,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_12.txt,23340,0.007546,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_120.txt,273967,0.051066,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_121.txt,236205,0.068609,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_122.txt,336383,0.099453,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_123.txt,295454,0.068497,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_124.txt,242916,0.068526,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_129.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_13.txt,25675,0.009886,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_130.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_131.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_132.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_133.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_134.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_135.txt,50967,0.009499,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_136.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_137.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_138.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_139.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_14.txt,33911,0.010566,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_140.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_141.txt,60783,0.014935,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_142.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_143.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_144.txt,56857,0.018686,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_145.txt,144785,0.016336,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_146.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_147.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_148.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_149.txt,129534,0.022738,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_15.txt,21017,0.011637,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_150.txt,144518,0.025916,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_151.txt,135377,0.022274,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_152.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_153.txt,118352,0.030983,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_154.txt,141891,0.030085,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_155.txt,153477,0.032237,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_156.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_158.txt,151707,0.037616,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_159.txt,122419,0.036523,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_16.txt,25938,0.014473,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_160.txt,136548,0.036441,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_161.txt,265855,0.031495,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_162.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_163.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_164.txt,293437,0.032705,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_165.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_166.txt,302143,0.051601,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_167.txt,270426,0.048567,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_168.txt,276194,0.044925,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_169.txt,225159,0.060698,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_17.txt,59216,0.011146,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_170.txt,298258,0.059495,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_171.txt,238935,0.059831,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_172.txt,332711,0.065856,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_173.txt,296136,0.099749,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_174.txt,308221,0.082435,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_175.txt,299714,0.078462,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_176.txt,225226,0.080396,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_177.txt,417865,0.042787,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_178.txt,388691,0.045472,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_179.txt,415177,0.044732,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_18.txt,59368,0.010624,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_180.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_181.txt,333998,0.062694,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_182.txt,380276,0.062487,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_183.txt,471021,0.062429,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_184.txt,371749,0.062685,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_19.txt,56598,0.009672,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_193.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_194.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_195.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_196.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_197.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_198.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_199.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_2.txt,24074,0.003954,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_20.txt,48094,0.012509,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_200.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_201.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_202.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_203.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_204.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_205.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_206.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_207.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_208.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_209.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_21.txt,62303,0.025564,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_210.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_211.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_212.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_213.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_214.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_215.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_216.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_217.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_218.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_219.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_22.txt,65033,0.015142,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_220.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_221.txt,170994,0.044925,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_222.txt,174537,0.043542,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_223.txt,194525,0.0465,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_224.txt,171835,0.043594,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_225.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_226.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_227.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_228.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_229.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_23.txt,74818,0.014479,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_230.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_231.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_232.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_233.txt,340553,0.069471,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_234.txt,373961,0.070725,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_235.txt,309305,0.070549,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_236.txt,333399,0.070207,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_24.txt,60955,0.0142,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_241.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_242.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_243.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_244.txt,0.0,0.0,Solution is not feasible
+MMKP_GR05,instances/standard/mmkp_d_25.txt,53261,0.01917,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_26.txt,56910,0.019072,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_27.txt,57813,0.019113,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_28.txt,38460,0.019099,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_29.txt,64104,0.02324,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_3.txt,23624,0.004248,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_30.txt,54488,0.023496,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_31.txt,76544,0.023716,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_32.txt,54324,0.023164,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_33.txt,122291,0.019449,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_34.txt,148291,0.023108,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_35.txt,102034,0.019696,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_36.txt,122664,0.019878,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_37.txt,140599,0.028761,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_38.txt,115424,0.027807,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_39.txt,109267,0.027581,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_4.txt,25218,0.003917,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_40.txt,103691,0.028631,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_41.txt,105372,0.03782,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_42.txt,123469,0.037084,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_43.txt,108010,0.037129,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_44.txt,104965,0.039252,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_45.txt,74380,0.049016,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_46.txt,124092,0.049305,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_47.txt,129502,0.050638,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_48.txt,132853,0.04605,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_49.txt,169481,0.027419,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_5.txt,26067,0.006712,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_50.txt,151656,0.030591,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_51.txt,181876,0.027393,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_52.txt,148748,0.026831,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_53.txt,144089,0.040248,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_54.txt,165134,0.039231,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_55.txt,142231,0.039764,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_56.txt,187880,0.039605,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_57.txt,157204,0.051765,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_59.txt,166505,0.051826,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_6.txt,26690,0.005755,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_60.txt,156780,0.052034,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_61.txt,193737,0.064119,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_62.txt,152406,0.068394,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_64.txt,201418,0.067776,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_65.txt,35257,0.005238,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_66.txt,43898,0.00578,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_67.txt,37050,0.008542,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_68.txt,38722,0.005107,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_69.txt,36157,0.007687,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_7.txt,25674,0.006261,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_70.txt,38499,0.009337,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_71.txt,35554,0.007287,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_72.txt,42999,0.008125,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_73.txt,47784,0.010275,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_74.txt,36414,0.01527,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_75.txt,41910,0.00959,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_76.txt,38620,0.010463,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_77.txt,45032,0.017476,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_78.txt,25084,0.012032,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_79.txt,39686,0.012749,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_8.txt,23122,0.006577,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_80.txt,36690,0.012766,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_81.txt,87785,0.01217,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_82.txt,105263,0.012775,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_83.txt,88884,0.012368,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_84.txt,83747,0.012425,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_85.txt,87632,0.018497,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_86.txt,94714,0.018973,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_87.txt,98153,0.01862,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_88.txt,85461,0.018195,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_89.txt,133045,0.024849,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_9.txt,24008,0.007443,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_90.txt,86648,0.024639,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_91.txt,73223,0.023619,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_92.txt,109239,0.025189,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_93.txt,98252,0.030094,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_94.txt,99572,0.030173,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_95.txt,106787,0.029905,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_97.txt,162297,0.025292,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_98.txt,191445,0.024503,Solution is feasible
+MMKP_GR05,instances/standard/mmkp_d_99.txt,194247,0.024966,Solution is feasible

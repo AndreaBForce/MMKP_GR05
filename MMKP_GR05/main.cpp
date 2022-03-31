@@ -70,8 +70,8 @@ int main(int argc, char *argv[]) {
 
   int timelimit = atoi(stimelimit);
 
-  std::cout << "Instance name: " << instance << "\n";
-  std::cout << "Timelimit: " << timelimit << "s\n";
+  // std::cout << "Instance name: " << instance << "\n";
+  // std::cout << "Timelimit: " << timelimit << "s\n";
 
   signal(SIGINT, signalHandler);
 
@@ -80,7 +80,7 @@ int main(int argc, char *argv[]) {
 
   mid = clock();
   
-  printf("time reading file: %.8fs \n", ((float)mid - start)/CLOCKS_PER_SEC);
+  // printf("time reading file: %.8fs \n", ((float)mid - start)/CLOCKS_PER_SEC);
 
   //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
   GreedyAlgo greedy(sack_handler.get_class_handler().get_number_of_pockets(), 0.61);
@@ -90,7 +90,7 @@ int main(int argc, char *argv[]) {
 
   readerWriter.save_vector_to_file(greedy.get_final_sequence(), instance, ((float)end - start)/CLOCKS_PER_SEC);
   
-  printf("time: %.8fs \n", ((float)end - start)/CLOCKS_PER_SEC);
+  // printf("time: %.8fs \n", ((float)end - start)/CLOCKS_PER_SEC);
 
   //code to check pocket sizes and the value
   int final_value = 0;
