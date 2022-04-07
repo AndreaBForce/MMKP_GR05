@@ -8,18 +8,18 @@
  * singola row*/
 class ClassInstance {
 public:
-  ClassInstance(int num_rows){
+  ClassInstance(int num_rows, int id){
+    this->id = id;
     rows.reserve(num_rows);
   }
   ~ClassInstance(){}
   
   void push_row(ClassRow class_row) { this->rows.push_back(class_row); };
   std::vector<ClassRow> get_rows() { return this->rows; };
+  int get_id(){return id;};
 
 private:
-  // Campi da rimuovere volendo
   int id;
-  int done;
 
   std::vector<ClassRow> rows;
 };

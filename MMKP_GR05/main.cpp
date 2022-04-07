@@ -1,6 +1,7 @@
 #include "GreedyAlgo.h"
 #include "ReaderWriter.h"
 #include "KnapsackHandler.h"
+#include "LocalSearch.h"
 #include <csignal>
 #include <cstring>
 #include <iostream>
@@ -85,6 +86,11 @@ int main(int argc, char *argv[]) {
   //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
   GreedyAlgo greedy(sack_handler.get_class_handler().get_number_of_pockets(), 0.61);
   std::vector<int> res = greedy.compute_greedy(sack_handler);
+
+  LocalSearch local_search(greedy.get_final_sequence(), 1);
+
+  //execute local search
+  local_search.compute_local_search(sack_handler);
   
   end = clock();
 

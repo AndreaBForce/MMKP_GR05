@@ -45,7 +45,7 @@ KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
     // Todo aggiungere un id
     // Dimensione instanza classe (10 esempio mmkp_d_244.txt)
     my_file >> instance_dimension;
-    ClassInstance class_instance(instance_dimension);
+    ClassInstance class_instance(instance_dimension, k);
     //creo qui la classInstance e passo il numero di righe che ha
 
     // std::cout << instance_dimension << std::endl;
@@ -53,7 +53,7 @@ KnapsackHandler ReaderWriter::read_instance(char *instance_name) {
     for (int i = 0; i < instance_dimension; i++) {
       //qua creo una righa, devo passare il numero di pockets
       my_file >> rowValue;
-      ClassRow class_row(pockets, rowValue);
+      ClassRow class_row(pockets, rowValue, i);
       // std::cout << rowValue << std::endl;
       // class_row.set_value(rowValue);
       // Su ogni row pusho i valori e li salvo

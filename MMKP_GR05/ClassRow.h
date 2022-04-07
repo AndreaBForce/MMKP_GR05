@@ -5,8 +5,9 @@
 /*Classe che definisce la singola row della classe instanza*/
 class ClassRow {
 public:
-  ClassRow(int num_values, int row_value){
+  ClassRow(int num_values, int row_value, int id){
     this->value = row_value;
+    this->id = id;
     row_values.reserve(num_values);
   }
   ~ClassRow(){}
@@ -14,10 +15,12 @@ public:
   void push_row_value(int value) { this->row_values.push_back(value); };
   void set_value(int value) { this->value = value; };
   int get_value() { return this->value; };
+  int get_id(){return id;};
   std::vector<int> get_row_values() { return this->row_values; };
 
 private:
   int value;
+  int id;
   std::vector<int> row_values;
 };
 
