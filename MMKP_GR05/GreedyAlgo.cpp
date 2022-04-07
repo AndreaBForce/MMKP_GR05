@@ -29,15 +29,18 @@ int GreedyAlgo::best_of_instance(std::vector<ClassRow> rows, std::vector<int> po
   
   for (ClassRow row : rows) {
     float average = 0;
+    long pockets_norm = 0;
     std::vector<int> row_values = row.get_row_values();
 
     for (int i = 0; i < pocket_sizes.size(); i++)
     {
+      pockets_norm += pow(pocket_sizes[i], 2);
       // average += (float) row_values[i]/pocket_sizes[i]*pocket_weight[i];
-      average += (float) pow(row_values[i], 2) * pocket_weight[i];
+      average += (float) pow(row_values[i], 2);
     }
 
-    average = sqrt(average);
+    average = sqrt(average)/sqrt(pockets_norm);
+
 
     if(min == -1.0){
       min = average;
