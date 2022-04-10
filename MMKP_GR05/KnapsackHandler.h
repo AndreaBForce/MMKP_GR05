@@ -9,6 +9,7 @@ class KnapsackHandler
 private:
     /* data */
     std::vector<int> sack;
+    std::vector<int> remaining_sack;
     ClassHandler class_handler;
 
 public:
@@ -18,6 +19,10 @@ public:
     ~KnapsackHandler() {}
 
     std::vector<int> get_sack(){return sack;};
+
+    std::vector<int> get_remaining_sack(){return remaining_sack;};
+
+    void set_remaining_sack(std::vector<int> v){ remaining_sack = v;};
 
     void add_pocket_size(int capacity) { sack.push_back(capacity);};
 

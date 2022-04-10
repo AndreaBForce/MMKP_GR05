@@ -85,32 +85,34 @@ int main(int argc, char *argv[]) {
 
   //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
   GreedyAlgo greedy(sack_handler.get_class_handler().get_number_of_pockets(), 0.61);
-  std::vector<int> res = greedy.compute_greedy(sack_handler);
+  sack_handler.set_remaining_sack(greedy.compute_greedy(sack_handler));
 
   LocalSearch local_search(greedy.get_final_sequence(), 1);
 
   //execute local search
-  local_search.compute_local_search(sack_handler);
-  
+  std::vector<int> res = local_search.compute_local_search(sack_handler);
+
   end = clock();
 
-  readerWriter.save_vector_to_file(greedy.get_final_sequence(), instance, ((float)end - start)/CLOCKS_PER_SEC);
+  readerWriter.save_vector_to_file(local_search.get_final_solution(), instance, ((float)end - start)/CLOCKS_PER_SEC);
   
   printf("time: %.8fs \n", ((float)end - start)/CLOCKS_PER_SEC);
 
   //code to check pocket sizes and the value
   int final_value = 0;
   ClassHandler class_handler = sack_handler.get_class_handler();
-  std::vector<int> final_sequence = greedy.get_final_sequence();
+  // std::vector<int> final_sequence = greedy.get_final_sequence();
+  std::vector<int> final_sequence = local_search.get_final_solution();
   for (int i = 0; i < sack_handler.get_class_handler().get_number_of_classes(); i++)
   {
     /* code */
     ClassInstance class_instance = class_handler.get_instance_at(i);
 
     ClassRow class_row = class_instance.get_rows()[final_sequence[i]];
-    std::vector<int> row_values = class_row.get_row_values(); 
+    // std::vector<int> row_values = class_row.get_row_values(); 
 
     final_value += class_row.get_value();
+
     // for (int j = 0; j < class_handler.get_number_of_pockets(); j++)
     // {
     //   /* code */
