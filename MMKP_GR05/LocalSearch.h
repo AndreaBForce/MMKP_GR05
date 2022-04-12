@@ -28,7 +28,7 @@ private:
     void swap(std::vector<ClassRow> &v, int x, int y);
     int get_sorted_index(std::vector<ClassRow> &v, int old_index);
     bool is_sack_full(std::vector<int> &v, std::vector<int> &row_values);
-    int improve_solution(std::vector<ClassRow> &class_rows, int sorted_index, std::vector<int> &res);
+    int improve_solution(std::vector<ClassRow> &class_rows, int sorted_index, std::vector<int> &res, ClassRow old_row);
 };
 
 

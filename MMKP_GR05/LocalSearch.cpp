@@ -14,15 +14,14 @@ std::vector<int> LocalSearch::compute_local_search(KnapsackHandler sack_handler)
         std::vector<ClassRow> class_rows = class_instance.get_rows();
         std::vector<ClassRow> class_rows_cp = class_instance.get_rows();
         int old_index = initial_solution[i];
-
+        int num_of_steps = step_num > class_rows.size()? class_rows.size() : step_num;
+        
         //sort class rows by value   
         quicksort(class_rows, 0, class_rows.size()-1);
         int sorted_index = get_sorted_index(class_rows, old_index);
 
-        int row_id = sorted_index;
-        int impv_sol = 0;
-        for(int k=0; k < step_num; k++){
-            impv_sol = improve_solution(class_rows, sorted_index, res);
+        for(int k=0; k < num_of_steps; k++){
+            int impv_sol = improve_solution(class_rows, sorted_index, res, class_rows_cp[old_index]);
 
             if (impv_sol == -1)
             {
@@ -30,23 +29,16 @@ std::vector<int> LocalSearch::compute_local_search(KnapsackHandler sack_handler)
                 break;
             }else{
                 local_search_sol[i] = impv_sol;
-                // old_index = impv_sol;
-                // std::cout << row_id << " ";
+                old_index = impv_sol;
             }
             
-            std::cout << sorted_index << " ";
-            // sorted_index++;
-            // std::cout << "\n"; 
-            
-        }    
-        std::cout << "\n"; 
-            
+            sorted_index++;
+        }                
     }
     return res;
 }
 
-int LocalSearch::improve_solution(std::vector<ClassRow> &class_rows, int sorted_index, std::vector<int> &res){
-    ClassRow old_row = class_rows[sorted_index];
+int LocalSearch::improve_solution(std::vector<ClassRow> &class_rows, int sorted_index, std::vector<int> &res, ClassRow old_row){
     std::vector<int> old_row_values = old_row.get_row_values();
 
     int first_improv = sorted_index < (class_rows.size()-1) ? sorted_index + 1 : -1;

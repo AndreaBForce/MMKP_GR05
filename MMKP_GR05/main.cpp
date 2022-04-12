@@ -64,6 +64,8 @@ int main(int argc, char *argv[]) {
   end = clock();
 
   final_sequence = local_search.get_final_solution();
+  // final_sequence = greedy.get_final_sequence();
+  // std::vector<int> res = sack_handler.get_remaining_sack();
   
   printf("time: %.8fs \n", ((float)end - start)/CLOCKS_PER_SEC);
 
