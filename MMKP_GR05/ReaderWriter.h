@@ -8,7 +8,7 @@ class ReaderWriter {
 public:
   KnapsackHandler read_instance(char *instance_name);
 
-  void save_vector_to_file(std::vector<int> out_vector, std::string instance_name, float time);
+  void save_vector_to_file(std::vector<int> out_vector, std::string instance_name);
 
 private:
 };

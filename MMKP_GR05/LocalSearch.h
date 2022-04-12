@@ -7,7 +7,6 @@ class LocalSearch{
 public:
     LocalSearch(std::vector<int> initial_solution, int step_num){
         this->initial_solution = initial_solution;
-        // local_search_sol.reserve(initial_solution.size());
         local_search_sol = std::vector<int>(initial_solution.size(), 0);
         this->step_num = step_num;
     };
@@ -28,7 +27,8 @@ private:
     std::vector<int> get_local_serch_sol(){return local_search_sol;};
     void swap(std::vector<ClassRow> &v, int x, int y);
     int get_sorted_index(std::vector<ClassRow> &v, int old_index);
-    bool is_sack_full(std::vector<int> v, std::vector<int> row_values);
+    bool is_sack_full(std::vector<int> &v, std::vector<int> &row_values);
+    int improve_solution(std::vector<ClassRow> &class_rows, int sorted_index, std::vector<int> &res);
 };
 
 

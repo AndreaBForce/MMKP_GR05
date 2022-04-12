@@ -8,6 +8,9 @@
 #include <string>
 #include <chrono>
 
+std::vector<int> final_sequence;
+std::string instance_name;
+
 char *getOption(int argc, char *argv[], const char *option) {
   for (int i = 0; i < argc; ++i)
     if (strcmp(argv[i], option) == 0)
@@ -16,44 +19,9 @@ char *getOption(int argc, char *argv[], const char *option) {
 }
 
 void signalHandler( int signum ) {
-   std::cout << "Interrupt signal (" << signum << ") received.\n";
-
-   exit(signum);  
-}
-
-// TODO REMOVE before assignment
-// method that checks all tune values between 0 and 1 with 1ms granularity
-void check_tune_values(KnapsackHandler sack_handler){
-  std::vector<float> tune_values;
-  float delta = 0.001;
-
-  for (int i = 0; i < 1000; i++)
-  {
-    //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
-    GreedyAlgo greedy(sack_handler.get_class_handler().get_number_of_pockets(), delta*i);
-    std::vector<int> res = greedy.compute_greedy(sack_handler);
-
-    int err = 0;
-    for (int size : res){
-      if (size < 0)
-      {
-        err = 1;
-        break;
-      }
-    }
-    if (err == 0)
-    {
-      tune_values.push_back(i*delta);
-    }
-    
-  }
-
-  std::cout << "Tune values" << "\n";
-  for (float v : tune_values)
-  {
-    std::cout << v << " ";
-  }
-  std::cout << "\n";
+  ReaderWriter writer;
+  writer.save_vector_to_file(final_sequence, instance_name);
+  exit(signum);  
 }
 
 int main(int argc, char *argv[]) {
@@ -69,6 +37,8 @@ int main(int argc, char *argv[]) {
     exit(1);
   }
 
+  instance_name = instance;
+
   int timelimit = atoi(stimelimit);
 
   std::cout << "Instance name: " << instance << "\n";
@@ -83,41 +53,31 @@ int main(int argc, char *argv[]) {
   
   printf("time reading file: %.8fs \n", ((float)mid - start)/CLOCKS_PER_SEC);
 
-  //prima leggo il file così inizializzo l'algoritmo con il numero di indici di output da avere
+  //compute greedy
   GreedyAlgo greedy(sack_handler.get_class_handler().get_number_of_pockets(), 0.61);
   sack_handler.set_remaining_sack(greedy.compute_greedy(sack_handler));
 
-  LocalSearch local_search(greedy.get_final_sequence(), 1);
-
-  //execute local search
+  //compute local search
+  LocalSearch local_search(greedy.get_final_sequence(), 7);
   std::vector<int> res = local_search.compute_local_search(sack_handler);
 
   end = clock();
 
-  readerWriter.save_vector_to_file(local_search.get_final_solution(), instance, ((float)end - start)/CLOCKS_PER_SEC);
+  final_sequence = local_search.get_final_solution();
   
   printf("time: %.8fs \n", ((float)end - start)/CLOCKS_PER_SEC);
 
   //code to check pocket sizes and the value
   int final_value = 0;
   ClassHandler class_handler = sack_handler.get_class_handler();
-  // std::vector<int> final_sequence = greedy.get_final_sequence();
-  std::vector<int> final_sequence = local_search.get_final_solution();
+
   for (int i = 0; i < sack_handler.get_class_handler().get_number_of_classes(); i++)
   {
-    /* code */
     ClassInstance class_instance = class_handler.get_instance_at(i);
 
     ClassRow class_row = class_instance.get_rows()[final_sequence[i]];
-    // std::vector<int> row_values = class_row.get_row_values(); 
 
     final_value += class_row.get_value();
-
-    // for (int j = 0; j < class_handler.get_number_of_pockets(); j++)
-    // {
-    //   /* code */
-    //   sack_handler.substract_pocket_size(row_values[j], j);
-    // }
   }
 
   std::cout << "Final value: " << final_value << "\n";
@@ -131,6 +91,7 @@ int main(int argc, char *argv[]) {
   
   std::cout << "\n";
 
+  signalHandler(0);
 
   return 0;
 }
