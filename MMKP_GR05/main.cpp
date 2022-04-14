@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
   sack_handler.set_remaining_sack(greedy.compute_greedy(sack_handler));
 
   //compute local search
-  LocalSearch local_search(greedy.get_final_sequence(), 7);
+  LocalSearch local_search(greedy.get_final_sequence(), -1);
   std::vector<int> res = local_search.compute_local_search(sack_handler);
 
   end = clock();

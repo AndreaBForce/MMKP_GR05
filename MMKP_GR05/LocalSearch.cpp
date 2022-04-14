@@ -1,23 +1,29 @@
 #include "LocalSearch.h"
 #include <iostream>
 #include <stdbool.h>
-
-
+#include <algorithm>
 
 std::vector<int> LocalSearch::compute_local_search(KnapsackHandler sack_handler){
     std::cout << "works" << std::endl;
     ClassHandler class_handler = sack_handler.get_class_handler();
     std::vector<int> res = sack_handler.get_remaining_sack();
+    std::vector<ClassInstance> class_list = class_handler.get_class_list();
+
+    std::cout << class_list[0].get_class_size() << "\n";
 
     for (int i = 0; i < class_handler.get_number_of_classes(); i++) {
-        ClassInstance class_instance = class_handler.get_instance_at(i);
+        ClassInstance class_instance = class_list[i];
         std::vector<ClassRow> class_rows = class_instance.get_rows();
         std::vector<ClassRow> class_rows_cp = class_instance.get_rows();
-        int old_index = initial_solution[i];
-        // int num_of_steps = step_num > class_rows.size()? class_rows.size() : step_num;
+        int old_index = initial_solution[class_instance.get_id()];
         
-        //sort class rows by value   
-        quicksort(class_rows, 0, class_rows.size()-1);
+        //sort class rows by value
+        std::sort(class_rows.begin(), class_rows.end(), 
+                [](ClassRow &c1, ClassRow &c2) -> bool
+                {
+                    return c1.get_value() < c2.get_value();
+                });
+
         int sorted_index = get_sorted_index(class_rows, old_index);
 
         int num_of_steps = class_rows.size() - sorted_index;
@@ -27,10 +33,10 @@ std::vector<int> LocalSearch::compute_local_search(KnapsackHandler sack_handler)
 
             if (impv_sol == -1)
             {
-                local_search_sol[i] = old_index;
+                local_search_sol[class_instance.get_id()] = old_index;
                 break;
             }else{
-                local_search_sol[i] = impv_sol;
+                local_search_sol[class_instance.get_id()] = impv_sol;
                 old_index = impv_sol;
             }
             
@@ -73,33 +79,6 @@ int LocalSearch::improve_solution(std::vector<ClassRow> &class_rows, int sorted_
         }
         return old_row.get_id();
     }
-}
-
-int LocalSearch::partition(std::vector<ClassRow> &v, int begin, int end){
-    int pivot = end;
-	int j = begin;
-	for(int i=begin; i<end; i++){
-		
-        if(v[i].get_value() < v[pivot].get_value()){
-			swap(v, i, j);
-			j++;
-		}
-	}
-	swap(v, j, pivot);
-	return j;
-}
-void LocalSearch::quicksort(std::vector<ClassRow> &v, int begin, int end){
-    if (begin<end){
-        int p = partition(v, begin, end);
-        quicksort(v, begin, p-1);
-        quicksort(v, p+1, end);
-    }
-}
-
-void LocalSearch::swap(std::vector<ClassRow> &v, int x, int y){
-    ClassRow tmp = v[x];
-    v[x] = v[y];
-    v[y] = tmp;
 }
 
 int LocalSearch::get_sorted_index(std::vector<ClassRow> &v, int old_index){

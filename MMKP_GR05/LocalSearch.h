@@ -22,10 +22,7 @@ private:
     std::vector<int> initial_solution;
     std::vector<int> local_search_sol;
 
-    int partition(std::vector<ClassRow> &v, int begin, int end);
-    void quicksort(std::vector<ClassRow> &v, int begin, int end);
     std::vector<int> get_local_serch_sol(){return local_search_sol;};
-    void swap(std::vector<ClassRow> &v, int x, int y);
     int get_sorted_index(std::vector<ClassRow> &v, int old_index);
     bool is_sack_full(std::vector<int> &v, std::vector<int> &row_values);
     int improve_solution(std::vector<ClassRow> &class_rows, int sorted_index, std::vector<int> &res, ClassRow old_row);

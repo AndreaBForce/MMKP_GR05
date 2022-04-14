@@ -17,6 +17,7 @@ public:
   void push_row(ClassRow class_row) { this->rows.push_back(class_row); };
   std::vector<ClassRow> get_rows() { return this->rows; };
   int get_id(){return id;};
+  int get_class_size(){return rows.size();};
 
 private:
   int id;

@@ -33,6 +33,8 @@ public:
 
   ClassInstance get_instance_at(int index) { return class_list[index]; };
 
+  std::vector<ClassInstance> get_class_list(){return class_list;};
+
   void print();
 
 private:
