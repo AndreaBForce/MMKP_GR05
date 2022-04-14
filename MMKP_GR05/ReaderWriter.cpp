@@ -70,13 +70,9 @@ void ReaderWriter::save_vector_to_file(std::vector<int> out_vector, std::string 
   std::ofstream out_file;
   std::ofstream time_file;
   out_file.open(instance_name + ".out");
-  time_file.open(instance_name + ".time");
 
   for (int valore : out_vector) {
     out_file << valore << " ";
   }
   out_file.close();
-
-  time_file << 0.1;
-  time_file.close();
 }
