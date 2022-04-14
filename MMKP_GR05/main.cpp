@@ -59,11 +59,25 @@ int main(int argc, char *argv[]) {
 
   //compute local search
   LocalSearch local_search(greedy.get_final_sequence(), -1);
-  std::vector<int> res = local_search.compute_local_search(sack_handler);
+  sack_handler.set_remaining_sack(local_search.compute_local_search(sack_handler));
+  // std::vector<int> res = local_search.compute_local_search(sack_handler);
+  
+  std::vector<int> prev_local_sol = local_search.get_final_solution();
+  std::vector<int> res;
+
+  for(int i = 0; i < 3; i++){
+    LocalSearch local_search2(prev_local_sol, 3);
+
+    res = local_search2.compute_local_search(sack_handler);
+
+    sack_handler.set_remaining_sack(res);
+
+    prev_local_sol = local_search2.get_final_solution();
+  }
 
   end = clock();
 
-  final_sequence = local_search.get_final_solution();
+  final_sequence = prev_local_sol;
   // final_sequence = greedy.get_final_sequence();
   // std::vector<int> res = sack_handler.get_remaining_sack();
   

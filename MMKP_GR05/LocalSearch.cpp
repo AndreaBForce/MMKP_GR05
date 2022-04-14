@@ -4,12 +4,9 @@
 #include <algorithm>
 
 std::vector<int> LocalSearch::compute_local_search(KnapsackHandler sack_handler){
-    std::cout << "works" << std::endl;
     ClassHandler class_handler = sack_handler.get_class_handler();
     std::vector<int> res = sack_handler.get_remaining_sack();
     std::vector<ClassInstance> class_list = class_handler.get_class_list();
-
-    std::cout << class_list[0].get_class_size() << "\n";
 
     for (int i = 0; i < class_handler.get_number_of_classes(); i++) {
         ClassInstance class_instance = class_list[i];
@@ -26,7 +23,7 @@ std::vector<int> LocalSearch::compute_local_search(KnapsackHandler sack_handler)
 
         int sorted_index = get_sorted_index(class_rows, old_index);
 
-        int num_of_steps = class_rows.size() - sorted_index;
+        int num_of_steps = step_num == -1?class_rows.size() - sorted_index : step_num;
 
         for(int k=0; k < num_of_steps; k++){
             int impv_sol = improve_solution(class_rows, sorted_index, res, class_rows_cp[old_index]);
