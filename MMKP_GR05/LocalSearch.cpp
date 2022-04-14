@@ -14,11 +14,13 @@ std::vector<int> LocalSearch::compute_local_search(KnapsackHandler sack_handler)
         std::vector<ClassRow> class_rows = class_instance.get_rows();
         std::vector<ClassRow> class_rows_cp = class_instance.get_rows();
         int old_index = initial_solution[i];
-        int num_of_steps = step_num > class_rows.size()? class_rows.size() : step_num;
+        // int num_of_steps = step_num > class_rows.size()? class_rows.size() : step_num;
         
         //sort class rows by value   
         quicksort(class_rows, 0, class_rows.size()-1);
         int sorted_index = get_sorted_index(class_rows, old_index);
+
+        int num_of_steps = class_rows.size() - sorted_index;
 
         for(int k=0; k < num_of_steps; k++){
             int impv_sol = improve_solution(class_rows, sorted_index, res, class_rows_cp[old_index]);
