@@ -7,7 +7,6 @@
 class KnapsackHandler
 {
 private:
-    /* data */
     std::vector<int> sack;
     std::vector<int> remaining_sack;
     ClassHandler class_handler;

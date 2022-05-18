@@ -4,8 +4,7 @@
 #include "ClassRow.h"
 #include <vector>
 
-/*Classe che gestisce la singola instanza della class_row W1 che contiene la
- * singola row*/
+/*Class that manage a single instance of the file (contains a list of row instances)*/
 class ClassInstance {
 public:
   ClassInstance(int num_rows, int id){

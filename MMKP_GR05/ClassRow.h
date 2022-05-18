@@ -2,7 +2,7 @@
 #define CLASSROW_H
 
 #include <vector>
-/*Classe che definisce la singola row della classe instanza*/
+/*Class tha manage a single row instance*/
 class ClassRow {
 public:
   ClassRow(int num_values, int row_value, int id){

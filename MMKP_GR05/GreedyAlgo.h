@@ -6,11 +6,11 @@
 class GreedyAlgo {
 public:
   GreedyAlgo(int num_classes, float tune_value){
-    // this->tune_delta = (float) 1/num_classes;
     this->tune_value = tune_value;
     this->sequence.reserve(num_classes);
     pocket_weight = std::vector<int>(num_classes, 1);
   };
+
   ~GreedyAlgo(){};
   std::vector<int> compute_greedy(KnapsackHandler sack_handler);
   int best_of_instance(std::vector<ClassRow> rows, std::vector<int> pocket_sizes);
@@ -23,7 +23,7 @@ private:
   std::vector<int> sequence;
   std::vector<int> pocket_weight;
 
-  //valori di tuning del greedy
+  //tuning values of the greedy
   float tune_delta;
   float tune_value;
 };

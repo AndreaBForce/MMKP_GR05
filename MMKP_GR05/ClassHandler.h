@@ -4,7 +4,7 @@
 #include "ClassInstance.h"
 #include <vector>
 
-/*Classe che con una lista di instanze di classi gestisce esse*/
+/*Class that manage all the instances of the file*/
 class ClassHandler {
 public:
   ClassHandler() {}
